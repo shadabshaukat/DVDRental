@@ -1,3 +1,4 @@
+-- select 'drop table '||table_name||' cascade constraints;' from user_tables;
 -- drop table FILM cascade constraints;
 -- drop table FILM_ACTOR cascade constraints;
 -- drop table FILM_CATEGORY cascade constraints;
