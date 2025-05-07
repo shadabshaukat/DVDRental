@@ -75,7 +75,7 @@ The DVDRental schema is designed to model a video rental business.
 
 # DVDRental Data Generation with Python
 
-## Install Python
+## 1. Install Python
 ```plaintext
     sudo yum install -y \
         gcc \
@@ -125,15 +125,41 @@ sudo ln -s /usr/local/bin/python3.9 /usr/bin/python3
 sudo ln -s /usr/local/bin/pip3.9 /usr/bin/pip3
 ```
 
-## Clone Repo
+## 2. Clone Repo
 ```plaintext
-https://github.com/shadabshaukat/DVDRental.git
+git clone https://github.com/shadabshaukat/DVDRental.git
 cd DVDRental/
 ```
-## Python Setup
+## 3. Python Setup
 ```plaintext
 python3 -m venv myenv
 source myenv/bin/activate
 pip3 install faker mysql-connector-python cx_Oracle psycopg2-binary
 ```
-## Edit 
+## 4. Edit ```DVDRental_Data_Generation.py``` and add your DB Config
+If you already have data in the tables, make sure to truncate the tables to avoid primary key constraints violated errors
+
+```
+truncate table film ;
+truncate table film_actor ;
+truncate table film_category ;
+truncate table inventory ;
+truncate table language ;
+truncate table payment ;
+truncate table rental ;
+truncate table staff ;
+truncate table store ;
+truncate table actor ;
+truncate table address ;
+truncate table category ;
+truncate table city ; 
+truncate table country ;
+truncate table customer ;
+```
+
+## 5. Run the Script
+```
+python3 DVDRental_Data_Generation.py
+```
+
+<img width="1050" alt="Screenshot 2025-05-07 at 17 12 50" src="https://github.com/user-attachments/assets/bfb3d69a-755f-48be-bb87-d3fb183a2b9e" />
