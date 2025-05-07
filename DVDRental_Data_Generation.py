@@ -17,18 +17,18 @@ DB_CONFIG = {
     'mysql': {
         'host': '10.180.2.88',
         'user': 'ggadmin',
-        'password': 'RAbbithole1234##',
+        'password': '',
         'database': 'dvdrental'
     },
     'oracle': {
         'user': 'mpos',
-        'password': 'abcdABCD1234##',
+        'password': '',
         'dsn': '10.180.2.158:1521/T1DB04'
     },
     'postgresql': {
         'host': '10.180.2.205',
         'user': 'ggadmin',
-        'password': 'RAbbithole1234##',
+        'password': '',
         'database': 'dvdrental'
     }
 }
