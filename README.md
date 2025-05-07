@@ -1,5 +1,5 @@
 # DVDRental Schema
-DVDRental Sample Database Across Oracle , MySQL , PostgreSQL & Redshift
+## DVDRental Sample Database for Oracle , MySQL , PostgreSQL & Redshift.
 
 ```plaintext
 +----------------+       +----------------+       +----------------+       +----------------+        +-----------------+
@@ -15,9 +15,9 @@ DVDRental Sample Database Across Oracle , MySQL , PostgreSQL & Redshift
                                                   +----------------+        +----------------+       | last_update     |
                                                                                                      +-----------------+
 
-+----------------+       +-----------------+       +----------------+       +----------------+       +----------------+
++----------------+       +-----------------+       +----------------+       +----------------+        +---------------+
 |  inventory     |       |     film        |       |    film_actor  |       |   film_category |       |    category    |
-+----------------+       +-----------------+       +----------------+       +----------------+       +----------------+
++----------------+       +-----------------+       +----------------+       +----------------+        +---------------+
 | inventory_id PK|<------| film_id PK      |<------| actor_id FK    |       | film_id FK      |       | category_id PK |
 | film_id FK     |       | title           |       | film_id FK     |       | category_id FK  |       | name           |
 | store_id       |       | description     |       | last_update    |       | last_update     |       | last_update    |
