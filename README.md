@@ -1,5 +1,5 @@
 # DVDRental Schema
-Cross-Database Clone of DVDRental Postgres Schema Across Heterogenous Databases
+DVDRental Sample Database Across Oracle , MySQL , PostgreSQL & Redshift
 
 ```plaintext
 +----------------+       +----------------+       +----------------+       +----------------+        +-----------------+
