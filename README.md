@@ -1,18 +1,19 @@
-# DVDRental
+# DVDRental Schema
 Cross-Database Clone of DVDRental Postgres Schema Across Heterogenous Databases
 
 ```plaintext
-+----------------+       +----------------+       +----------------+       +----------------+       +----------------+
++----------------+       +----------------+       +----------------+       +----------------+        +-----------------+
 |   country      |       |    city        |       |  address       |       |     customer    |       |     rental      |
-+----------------+       +----------------+       +----------------+       +----------------+       +----------------+
++----------------+       +----------------+       +----------------+       +----------------+        +-----------------+
 | country_id PK  |<------| city_id PK     |<------| address_id PK  |<------| customer_id PK  |<------| rental_id PK    |
 | country        |       | city           |       | address        |       | store_id        |       | rental_date     |
 | last_update    |       | country_id FK  |       | address2       |       | first_name      |       | inventory_id FK |
 +----------------+       | last_update    |       | district       |       | last_name       |       | customer_id FK  |
-                        +----------------+       | postal_code    |       | email           |       | return_date     |
-                                                 | phone          |       | address_id FK   |       | staff_id FK     |
-                                                 | last_update    |       | active          |       | last_update     |
-                                                 +----------------+       +----------------+       +----------------+
+                        +----------------+       | postal_code    |       | email           |        | return_date     |
+                                                 | phone          |       | address_id FK   |        | status          |
+                                                 | last_update    |       | active          |        | staff_id FK     |
+                                                 +----------------+       +----------------+         | last_update     |
+                                                                                                     +-----------------+
 
 +----------------+       +----------------+       +----------------+       +----------------+       +----------------+
 |  inventory     |       |     film       |       |    film_actor  |       |   film_category |       |    category     |
