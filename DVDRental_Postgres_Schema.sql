@@ -1,5 +1,22 @@
 -- Schema for DVDrental database in PostgreSQL 14
 
+-- truncate table film ;
+-- truncate table film_actor ;
+-- truncate table film_category ;
+-- truncate table inventory ;
+-- truncate table language ;
+-- truncate table payment ;
+-- truncate table rental ;
+-- truncate table staff ;
+-- truncate table store ;
+-- truncate table actor ;
+-- truncate table address ;
+-- truncate table category ;
+-- truncate table city ; 
+-- truncate table country ;
+-- truncate table customer ;
+
+
 -- Create table: actor
 CREATE TABLE actor (
     actor_id SERIAL PRIMARY KEY,
@@ -38,7 +55,7 @@ CREATE TABLE city (
 -- Create table: country
 CREATE TABLE country (
     country_id SERIAL PRIMARY KEY,
-    country VARCHAR(50) NOT NULL,
+    country VARCHAR(200) NOT NULL,
     last_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
@@ -61,7 +78,7 @@ CREATE TABLE film (
     film_id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
     description TEXT,
-    release_year YEAR,
+    release_year VARCHAR(50),
     language_id INT NOT NULL,
     rental_duration INT DEFAULT 3 NOT NULL,
     rental_rate NUMERIC(4,2) DEFAULT 4.99 NOT NULL,
@@ -121,9 +138,11 @@ CREATE TABLE rental (
     inventory_id INT NOT NULL,
     customer_id INT NOT NULL,
     return_date TIMESTAMP,
+    status varchar(50),
     staff_id INT NOT NULL,
     last_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
+
 
 -- Create table: staff
 CREATE TABLE staff (
@@ -133,8 +152,8 @@ CREATE TABLE staff (
     address_id INT NOT NULL,
     email VARCHAR(50),
     store_id INT NOT NULL,
-    active BOOLEAN DEFAULT TRUE NOT NULL,
-    username VARCHAR(16) NOT NULL,
+    active INT NOT NULL,
+    username VARCHAR(200) NOT NULL,
     password VARCHAR(40),
     last_update TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     picture BYTEA
