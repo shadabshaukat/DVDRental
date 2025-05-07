@@ -72,3 +72,58 @@ The DVDRental schema is designed to model a video rental business.
         film_actor creates a many-to-many relationship between films and actors.
         category groups films into genres, with film_category managing the many-to-many relationship.
 
+# DVDRental Data Generation with Python
+
+## Install Python
+```plaintext
+    sudo yum install -y \
+        gcc \
+        make \
+        zlib-devel \
+        libffi-devel \
+        openssl-devel \
+        bzip2-devel \
+        xz-devel \
+        ncurses-devel \
+        sqlite-devel \
+        readline-devel
+        
+wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0.tar.xz
+
+tar -xJf Python-3.9.0.tar.xz
+    
+cd Python-3.9.0
+./configure --enable-optimizations
+
+make -j $(nproc)
+
+sudo make altinstall
+
+python3.9 --version
+
+which python3.9
+
+/usr/local/bin/python3.9
+
+/usr/local/bin/python3.9 -m site
+
+sys.path = [
+    '/home/opc/Python-3.9.0',
+    '/usr/local/lib/python39.zip',
+    '/usr/local/lib/python3.9',
+    '/usr/local/lib/python3.9/lib-dynload',
+    '/usr/local/lib/python3.9/site-packages',
+]
+USER_BASE: '/home/opc/.local' (exists)
+USER_SITE: '/home/opc/.local/lib/python3.9/site-packages' (doesn't exist)
+ENABLE_USER_SITE: True
+
+/usr/local/bin/python3.9 -m ensurepip --upgrade
+
+sudo ln -s /usr/local/bin/python3.9 /usr/bin/python3
+sudo ln -s /usr/local/bin/pip3.9 /usr/bin/pip3
+```
+
+## Clone Repo
+
+
