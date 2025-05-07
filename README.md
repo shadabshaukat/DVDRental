@@ -126,5 +126,14 @@ sudo ln -s /usr/local/bin/pip3.9 /usr/bin/pip3
 ```
 
 ## Clone Repo
-
-
+```plaintext
+https://github.com/shadabshaukat/DVDRental.git
+cd DVDRental/
+```
+## Python Setup
+```plaintext
+python3 -m venv myenv
+source myenv/bin/activate
+pip3 install faker mysql-connector-python cx_Oracle psycopg2-binary
+```
+## Edit 
