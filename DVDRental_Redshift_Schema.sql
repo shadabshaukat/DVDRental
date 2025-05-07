@@ -129,6 +129,7 @@ CREATE TABLE rental (
     inventory_id INT,
     customer_id INT,
     return_date TIMESTAMP,
+    status varchar(50),
     staff_id SMALLINT,
     last_update TIMESTAMP,
     PRIMARY KEY (rental_id)
