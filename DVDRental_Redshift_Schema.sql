@@ -53,7 +53,7 @@ CREATE TABLE staff (
     email VARCHAR(50),
     store_id SMALLINT,
     active BOOLEAN,
-    username VARCHAR(16),
+    username VARCHAR(200),
     password VARCHAR(32),
     last_update TIMESTAMP,
     PRIMARY KEY (staff_id)
@@ -90,7 +90,7 @@ SORTKEY (country_id);
 -- Country table
 CREATE TABLE country (
     country_id INT ,
-    country VARCHAR(50),
+    country VARCHAR(300),
     last_update TIMESTAMP,
     PRIMARY KEY (country_id)
 )
