@@ -9,19 +9,19 @@
 | country        |       | city           |       | address        |       | store_id        |       | rental_date     |
 | last_update    |       | country_id FK  |       | address2       |       | first_name      |       | inventory_id FK |
 +----------------+       | last_update    |       | district       |       | last_name       |       | customer_id FK  |
-                         +---------------+        | postal_code    |       | email           |       | return_date     |
+                         +----------------+       | postal_code    |       | email           |       | return_date     |
                                                   | phone          |       | address_id FK   |       | status          |
                                                   | last_update    |       | active          |       | staff_id FK     |
                                                   +----------------+        +----------------+       | last_update     |
                                                                                                      +-----------------+
 
-+----------------+       +-----------------+       +----------------+       +----------------+        +---------------+
++----------------+       +-----------------+       +----------------+       +-----------------+       +----------------+
 |  inventory     |       |     film        |       |    film_actor  |       |   film_category |       |    category    |
-+----------------+       +-----------------+       +----------------+       +----------------+        +---------------+
++----------------+       +-----------------+       +----------------+       +-----------------+       +----------------+
 | inventory_id PK|<------| film_id PK      |<------| actor_id FK    |       | film_id FK      |       | category_id PK |
 | film_id FK     |       | title           |       | film_id FK     |       | category_id FK  |       | name           |
 | store_id       |       | description     |       | last_update    |       | last_update     |       | last_update    |
-| last_update    |       | release_year    |       +----------------+        +----------------+       +----------------+
+| last_update    |       | release_year    |       +----------------+       +-----------------+       +----------------+
 +----------------+       | language_id FK  |
                          | rental_duration |
                          | rental_rate     |
@@ -30,16 +30,16 @@
                          | rating          |
                          | last_update     |
                          | special_features|
-                          +----------------+
+                         +-----------------+
 
-+----------------+       +----------------+       +----------------+       +----------------+       +----------------+
-|  staff         |       |     store      |       |    language    |       |      payment    |       |    actor      |
-+----------------+       +----------------+       +----------------+       +----------------+       +----------------+
-| staff_id PK    |<------| store_id PK    |       | language_id PK |       | payment_id PK   |       | actor_id PK   |
++----------------+       +-----------------+      +----------------+       +-----------------+       +---------------+
+|  staff         |       |     store       |      |    language    |       |      payment    |       |    actor      |
++----------------+       +-----------------+      +----------------+       +-----------------+       +---------------+
+| staff_id PK    |<------| store_id PK     |      | language_id PK |       | payment_id PK   |       | actor_id PK   |
 | first_name     |       | manager_staff_id|      | name           |       | customer_id FK  |       | first_name    |
-| last_name      |       | address_id FK  |       | last_update    |       | staff_id FK     |       | last_name     |
-| address_id FK  |       | last_update    |       +----------------+       | rental_id FK    |       | last_update   |
-| email          |       +----------------+                                | amount          |       +---------------+
+| last_name      |       | address_id FK   |      | last_update    |       | staff_id FK     |       | last_name     |
+| address_id FK  |       | last_update     |      +----------------+       | rental_id FK    |       | last_update   |
+| email          |       +-----------------+                               | amount          |       +---------------+
 | store_id FK    |                                                         | payment_date    |
 | username       |                                                         +-----------------+
 | password       |
