@@ -1,5 +1,21 @@
 -- Schema for DVDrental database optimized for Amazon Redshift
 
+drop table FILM ;
+drop table FILM_ACTOR ;
+drop table FILM_CATEGORY ;
+drop table INVENTORY ;
+drop table LANGUAGE ;
+drop table PAYMENT ;
+drop table RENTAL ;
+drop table STAFF ;
+drop table STORE ;
+drop table ACTOR ;
+drop table ADDRESS ;
+drop table CATEGORY ;
+drop table CITY ;
+drop table COUNTRY ;
+drop table CUSTOMER ;
+
 -- Customer table
 CREATE TABLE customer (
     customer_id INT ,
