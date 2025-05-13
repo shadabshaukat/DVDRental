@@ -51,27 +51,27 @@
 The DVDRental schema is designed to model a video rental business. 
 
    ## Country, City, Address:
-        country contains the list of countries.
-        city belongs to a country (country_id is a foreign key).
-        address specifies locations linked to cities (city_id is a foreign key).
+        - country contains the list of countries.
+        - city belongs to a country (country_id is a foreign key).
+        - address specifies locations linked to cities (city_id is a foreign key).
 
    ##    Customer:
-        Each customer is associated with an address (address_id is a foreign key) and a store (store_id).
+        - Each customer is associated with an address (address_id is a foreign key) and a store (store_id).
 
    ##     Store and Staff:
-        A store is managed by a staff member (manager_staff_id is a foreign key).
-        staff members are linked to an address and store.
+        - A store is managed by a staff member (manager_staff_id is a foreign key).
+        - staff members are linked to an address and store.
 
    ##    Film, Inventory, Rental, and Payment:
-        film contains details about movies, including associated languages.
-        inventory links films to stores for tracking availability.
-        rental logs customer rentals, connecting inventory, customers, and staff.
-        payment records the financial transactions related to rentals.
+        - film contains details about movies, including associated languages.
+        - inventory links films to stores for tracking availability.
+        - rental logs customer rentals, connecting inventory, customers, and staff.
+        - payment records the financial transactions related to rentals.
 
    ##    Actors and Categories:
-        actor lists actors in the films.
-        film_actor creates a many-to-many relationship between films and actors.
-        category groups films into genres, with film_category managing the many-to-many relationship.
+        - actor lists actors in the films.
+        - film_actor creates a many-to-many relationship between films and actors.
+        - category groups films into genres, with film_category managing the many-to-many relationship.
 
 # DVDRental Data Generation with Python
 
